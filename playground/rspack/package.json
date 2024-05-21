@@ -1,0 +1,12 @@
+{
+  "name": "rspack",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "rspack serve"
+  },
+  "devDependencies": {
+    "@rspack/cli": "0.6.5",
+    "@rspack/core": "0.6.5"
+  }
+}
