@@ -1,6 +1,5 @@
 <p align="center"><a href="https://github.com/renzp94/unplugin-build-info" target="_blank" rel="noopener noreferrer"><img width="200" src="./logo.png" alt="unplugin-build-info logo"></a></p>
 <p align="center">
-  <a href="https://codecov.io/github/@renzp/unplugin-build-info"><img src="https://img.shields.io/codecov/c/github/@renzp/unplugin-build-info.svg?sanitize=true" alt="Coverage Status"></a>
   <a href="https://npmcharts.com/compare/@renzp/unplugin-build-info?minimal=true"><img src="https://img.shields.io/npm/dm/@renzp/unplugin-build-info.svg?sanitize=true" alt="Downloads"></a>
   <a href="https://www.npmjs.com/package/@renzp/unplugin-build-info"><img src="https://img.shields.io/npm/v/@renzp/unplugin-build-info.svg?sanitize=true" alt="Version"></a>
   <a href="https://www.npmjs.com/package/@renzp/unplugin-build-info"><img src="https://img.shields.io/npm/l/@renzp/unplugin-build-info.svg?sanitize=true" alt="License"></a>
@@ -12,7 +11,18 @@
 
 # @renzp/unplugin-build-info
 
-一款将打包信息打印在控制台的webpack/Rspack/Vite/Rollup插件。
+一款将打包信息打印在控制台上的插件。
+
+![demo.png](./demo.png)
+
+支持框架：
+
+- `webpack4/webpack5`
+- `vite`
+- `rollup`
+- `rspack`
+- `rsbuild`
+- `farm`
 
 ## Install
 
@@ -22,10 +32,10 @@ npm i @renzp/unplugin-build-info -D
 
 ## Usage
 
-`webpack.config.ts`
+### webpack
 
-`import`
-```js
+```ts
+// webpack.config.ts
 import BuildInfoWebpackPlugin from '@renzp/unplugin-build-info/webpack'
 
 export default {
@@ -33,34 +43,65 @@ export default {
 }
 ```
 
-`rspack.config.js`
-```js
-const BuildInfoRspackPlugin = require('@renzp/unplugin-build-info/rspack')
+### vite
 
-module.exports = {
-  plugins: [BuildInfoRspackPlugin()]
-}
-```
-
-`rsbuild.config.ts`
-```js
-const BuildInfoRspackPlugin = require('@renzp/unplugin-build-info/rspack')
-
-export default {
-  tools: {
-    rspack: {
-      plugins: [BuildInfoRspackPlugin()]
-    }
-  }
-}
-```
-
-`vite.config.ts`
-```js
-const BuildInfoVitePlugin = require('@renzp/unplugin-build-info/vite')
+```ts
+// vite.config.ts
+import { defineConfig } from 'vite'
+import BuildInfoVitePlugin from '@renzp/unplugin-build-info/vite'
 
 export default defineConfig({
   plugins: [BuildInfoVitePlugin()],
+})
+```
+
+### rspack
+
+```js
+// rspack.config.js
+const BuildInfoRspackPlugin = require('@renzp/unplugin-build-info/rspack')
+
+module.exports = {
+  plugins: [BuildInfoRspackPlugin.default()]
+}
+```
+
+### rsbuild
+
+```ts
+// rsbuild.config.ts
+import { defineConfig } from '@rsbuild/core'
+import BuildInfoRspackPlugin from '@renzp/unplugin-build-info/rspack'
+
+export default defineConfig({
+  tools: {
+    rspack: {
+      plugins: [BuildInfoRspackPlugin()],
+    },
+  },
+})
+```
+
+### rollup
+
+```js
+// rollup.config.mjs
+import BuildInfoRollupPlugin from '@renzp/unplugin-build-info/rollup'
+
+export default {
+  plugins: [BuildInfoRollupPlugin()],
+}
+```
+
+### farm
+
+```ts
+// farm.config.ts
+import { defineConfig } from '@farmfe/core'
+import BuildInfoVitePlugin from '@renzp/unplugin-build-info/vite'
+
+export default defineConfig({
+  vitePlugins: [BuildInfoVitePlugin()],
 })
 ```
 
