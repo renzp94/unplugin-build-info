@@ -1,0 +1,13 @@
+{
+  "name": "farm",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "farm"
+  },
+  "devDependencies": {
+    "@farmfe/cli": "^1.0.1",
+    "@farmfe/core": "^1.1.1"
+  }
+}

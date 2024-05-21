@@ -5,7 +5,7 @@
   "scripts": {
     "watch": "rollup -c -w",
     "dev": "npm-run-all --parallel start watch",
-    "start": "serve dist -p 8001"
+    "start": "serve dist -p 8000"
   },
   "devDependencies": {
     "@rollup/plugin-html": "^1.0.3",

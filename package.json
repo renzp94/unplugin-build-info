@@ -86,12 +86,14 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch src",
+    "play:farm": "npm -C playground/farm run dev",
     "play:rollup": "npm -C playground/rollup run dev",
+    "play:rsbuild": "npm -C playground/rsbuild run dev",
     "play:rspack": "npm -C playground/rspack run dev",
     "play:vite": "npm -C playground/vite run dev",
     "play:webpack4": "npm -C playground/webpack4 run dev",
     "play:webpack5": "npm -C playground/webpack5 run dev",
-    "play": "npm-run-all --parallel play:rollup play:rspack play:vite play:webpack4 play:webpack5",
+    "play": "npm-run-all --parallel play:farm play:rollup play:rsbuild play:rspack play:vite play:webpack4 play:webpack5",
     "release": "standard-version",
     "pub": "npm run build && standard-version && npm publish"
   },
