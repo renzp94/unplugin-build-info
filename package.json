@@ -1,8 +1,9 @@
 {
-  "name": "unplugin-build-info",
+  "name": "@renzp/unplugin-build-info",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "一款将打包信息打印在控制台的webpack/Rspack/Vite/Rollup插件",
+  "author": "renzp <1074720760.qq.com>",
   "license": "MIT",
   "homepage": "https://github.com/renzp94/unplugin-build-info#readme",
   "repository": {
@@ -11,6 +12,10 @@
   },
   "bugs": {
     "url": "https://github.com/renzp94/unplugin-build-info/issues"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
   },
   "keywords": [
     "unplugin",
