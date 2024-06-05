@@ -19,11 +19,15 @@ export const unpluginFactory: UnpluginFactory<Options | undefined> = (
       htmlHeadCloseTag = await getBuildInfo(root, options)
     },
     async webpack(compiler) {
-      htmlHeadCloseTag = await getBuildInfo(root, options)
+      if (!htmlHeadCloseTag) {
+        htmlHeadCloseTag = await getBuildInfo(root, options)
+      }
       webpackCompiler(compiler, htmlHeadCloseTag, html)
     },
     async rspack(compiler) {
-      htmlHeadCloseTag = await getBuildInfo(root, options)
+      if (!htmlHeadCloseTag) {
+        htmlHeadCloseTag = await getBuildInfo(root, options)
+      }
       webpackCompiler(compiler, htmlHeadCloseTag, html)
     },
     vite: {
