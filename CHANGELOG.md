@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.2](https://github.com/renzp94/unplugin-build-info/compare/v1.0.1...v1.0.2) (2024-06-05)
+
+
+### 其他
+
+* 调整logo及更新README ([c9727fa](https://github.com/renzp94/unplugin-build-info/commit/c9727facb6cbd555f0d93423ebf6d694c4ad876a))
+
 ### 1.0.1 (2024-06-05)
 
 
