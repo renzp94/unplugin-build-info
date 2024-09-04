@@ -1,7 +1,7 @@
 {
   "name": "@renzp/unplugin-build-info",
   "type": "module",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "一款将打包信息打印在控制台的webpack/Rspack/Vite/Rollup插件",
   "author": "renzp <1074720760.qq.com>",
   "license": "MIT",
